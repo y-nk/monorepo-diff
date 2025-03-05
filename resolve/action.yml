@@ -1,0 +1,24 @@
+name: resolve workspace
+description: get all workspaces of a monorepo
+
+inputs:
+  name:
+    required: true
+    description: the name of the workspace
+
+outputs:
+  name:
+    description: the workspace's manifest name
+
+  version:
+    description: the workspace's manifest version
+
+  path:
+    description: the workspace's relative path
+
+  pm:
+    description: the workspace's package manager
+
+runs:
+  using: "node20"
+  main: "./index.js"

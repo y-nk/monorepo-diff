@@ -1,0 +1,10 @@
+name: list workspaces
+description: get all workspaces of a monorepo
+
+outputs:
+  workspaces:
+    description: ""
+
+runs:
+  using: "node20"
+  main: "./index.js"

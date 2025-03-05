@@ -1,0 +1,56 @@
+name: diff workspaces
+description: Checking if a workspace version between 2 commits
+
+inputs:
+  base:
+    required: true
+    description: git base ref to calculate diff
+
+  head:
+    required: true
+    description: git head ref to calculate diff
+
+  workspaces:
+    required: true
+    description: list of known paths containing workspaces
+
+outputs:
+  all:
+    description: ''
+
+  all-count:
+    description: ''
+
+  all-md:
+    description: ''
+
+  modified:
+    description: ''
+
+  modified-count:
+    description: ''
+
+  modified-md:
+    description: ''
+
+  bumped:
+    description: ''
+
+  bumped-count:
+    description: ''
+
+  bumped-md:
+    description: ''
+
+  conflicting:
+    description: ''
+
+  conflicting-count:
+    description: ''
+
+  conflicting-md:
+    description: ''
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
